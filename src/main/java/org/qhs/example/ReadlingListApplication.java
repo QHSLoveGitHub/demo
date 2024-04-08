@@ -1,10 +1,10 @@
-package org.example;
+package org.qhs.example;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class ReadlingListApplication
 {
     public static void main( String[] args )
     {
