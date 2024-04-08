@@ -8,17 +8,20 @@
   <version>1.0-SNAPSHOT</version>
   <name>springboot-demo</name>
 
-  <properties>
-      <spring.boot.version>2.2.9.RELEASE</spring.boot.version>
-      <mysql.java.version>8.0.29</mysql.java.version>
-      <junit.version>4.13.1</junit.version>
-      <!--Maven插件-->
-      <maven.compiler.plugin>3.1</maven.compiler.plugin>
-      <maven.compiler.target>1.8</maven.compiler.target>
-      <maven.surefire.plugin>2.16</maven.surefire.plugin>
-      <maven.clean.plugin>2.5</maven.clean.plugin>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <mysql.java.version>8.0.29</mysql.java.version>
+        <junit.version>4.13.1</junit.version>
+    </properties>
+
   <dependencies>
 
       <!--junit test-->
@@ -29,11 +32,15 @@
           <scope>test</scope>
       </dependency>
 
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-test</artifactId>
+      </dependency>
+
     <!--web-->
       <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-web</artifactId>
-          <version>${spring.boot.version}</version>
       </dependency>
 
       <!--jpa-->
@@ -52,6 +59,7 @@
       <dependency>
           <groupId>mysql</groupId>
           <artifactId>mysql-connector-java</artifactId>
+          <version>${mysql.java.version}</version>
       </dependency>
   </dependencies>
 
@@ -64,12 +72,12 @@
             </plugin>
         </plugins>
 
-        <resources>
-            <resource>
-                <filtering>true</filtering>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <filtering>true</filtering>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--            </resource>-->
+<!--        </resources>-->
     </build>
 
 </project>
