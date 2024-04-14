@@ -1,0 +1,6 @@
+logging:
+  file:
+    path: /vars/log
+    name: bookworm.log
+  level:
+    root: warn
